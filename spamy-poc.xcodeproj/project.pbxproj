@@ -1,0 +1,859 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F80A0B0D22D99010002A32DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A0B0C22D99010002A32DC /* AppDelegate.swift */; };
+		F80A0B0F22D99010002A32DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A0B0E22D99010002A32DC /* ViewController.swift */; };
+		F80A0B1222D99010002A32DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F80A0B1022D99010002A32DC /* Main.storyboard */; };
+		F80A0B1422D99010002A32DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F80A0B1322D99010002A32DC /* Assets.xcassets */; };
+		F80A0B1722D99010002A32DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F80A0B1522D99010002A32DC /* LaunchScreen.storyboard */; };
+		F80A0B2222D99011002A32DC /* spamy_pocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A0B2122D99011002A32DC /* spamy_pocTests.swift */; };
+		F80A0B2D22D99011002A32DC /* spamy_pocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A0B2C22D99011002A32DC /* spamy_pocUITests.swift */; };
+		F80A0B4122D9903E002A32DC /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A0B4022D9903E002A32DC /* MessageFilterExtension.swift */; };
+		F80A0B4522D9903E002A32DC /* filter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F80A0B3E22D9903E002A32DC /* filter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F8175E2322E4AB3200D4175C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8175E2222E4AB3200D4175C /* Global.swift */; };
+		F833E9EC22DB5B3800EC712F /* BlocklistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833E9EB22DB5B3800EC712F /* BlocklistVC.swift */; };
+		F833E9EE22DB5B4800EC712F /* WhitelistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833E9ED22DB5B4800EC712F /* WhitelistVC.swift */; };
+		F833E9F022DB5B5A00EC712F /* TestFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833E9EF22DB5B5A00EC712F /* TestFilterVC.swift */; };
+		F833E9F222DB5B6900EC712F /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833E9F122DB5B6900EC712F /* AboutVC.swift */; };
+		F8E37C0322D9D3EA00F48FA1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E37C0222D9D3EA00F48FA1 /* Constant.swift */; };
+		F8E37C0C22D9D65B00F48FA1 /* MainMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E37C0B22D9D65B00F48FA1 /* MainMenuTVC.swift */; };
+		F8E37C0E22D9D9D400F48FA1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E37C0D22D9D9D400F48FA1 /* UIColor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F80A0B1E22D99011002A32DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F80A0B0122D99010002A32DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F80A0B0822D99010002A32DC;
+			remoteInfo = "spamy-poc";
+		};
+		F80A0B2922D99011002A32DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F80A0B0122D99010002A32DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F80A0B0822D99010002A32DC;
+			remoteInfo = "spamy-poc";
+		};
+		F80A0B4322D9903E002A32DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F80A0B0122D99010002A32DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F80A0B3D22D9903E002A32DC;
+			remoteInfo = filter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F80A0B4922D9903E002A32DC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F80A0B4522D9903E002A32DC /* filter.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F80A0B0922D99010002A32DC /* spamy-poc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spamy-poc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80A0B0C22D99010002A32DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F80A0B0E22D99010002A32DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F80A0B1122D99010002A32DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F80A0B1322D99010002A32DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F80A0B1622D99010002A32DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F80A0B1822D99010002A32DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F80A0B1D22D99011002A32DC /* spamy-pocTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spamy-pocTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80A0B2122D99011002A32DC /* spamy_pocTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spamy_pocTests.swift; sourceTree = "<group>"; };
+		F80A0B2322D99011002A32DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F80A0B2822D99011002A32DC /* spamy-pocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spamy-pocUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80A0B2C22D99011002A32DC /* spamy_pocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spamy_pocUITests.swift; sourceTree = "<group>"; };
+		F80A0B2E22D99011002A32DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F80A0B3E22D9903E002A32DC /* filter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = filter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80A0B4022D9903E002A32DC /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
+		F80A0B4222D9903E002A32DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8175E2222E4AB3200D4175C /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		F833E9EB22DB5B3800EC712F /* BlocklistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocklistVC.swift; sourceTree = "<group>"; };
+		F833E9ED22DB5B4800EC712F /* WhitelistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitelistVC.swift; sourceTree = "<group>"; };
+		F833E9EF22DB5B5A00EC712F /* TestFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFilterVC.swift; sourceTree = "<group>"; };
+		F833E9F122DB5B6900EC712F /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		F8E37C0222D9D3EA00F48FA1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		F8E37C0B22D9D65B00F48FA1 /* MainMenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTVC.swift; sourceTree = "<group>"; };
+		F8E37C0D22D9D9D400F48FA1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F8E37C0F22DA4AFD00F48FA1 /* spamy-poc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "spamy-poc.entitlements"; sourceTree = "<group>"; };
+		F8E37C1022DA4B1C00F48FA1 /* filter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = filter.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F80A0B0622D99010002A32DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80A0B1A22D99011002A32DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80A0B2522D99011002A32DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80A0B3B22D9903E002A32DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F80A0B0022D99010002A32DC = {
+			isa = PBXGroup;
+			children = (
+				F80A0B0B22D99010002A32DC /* spamy-poc */,
+				F80A0B2022D99011002A32DC /* spamy-pocTests */,
+				F80A0B2B22D99011002A32DC /* spamy-pocUITests */,
+				F80A0B3F22D9903E002A32DC /* filter */,
+				F80A0B0A22D99010002A32DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F80A0B0A22D99010002A32DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F80A0B0922D99010002A32DC /* spamy-poc.app */,
+				F80A0B1D22D99011002A32DC /* spamy-pocTests.xctest */,
+				F80A0B2822D99011002A32DC /* spamy-pocUITests.xctest */,
+				F80A0B3E22D9903E002A32DC /* filter.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F80A0B0B22D99010002A32DC /* spamy-poc */ = {
+			isa = PBXGroup;
+			children = (
+				F8E37C0F22DA4AFD00F48FA1 /* spamy-poc.entitlements */,
+				F8E37C0622D9D5BA00F48FA1 /* Controller */,
+				F8E37C0522D9D5B500F48FA1 /* Model */,
+				F8E37C0422D9D5AA00F48FA1 /* View */,
+				F8E37C0122D9D3D500F48FA1 /* Accessory */,
+				F80A0B0C22D99010002A32DC /* AppDelegate.swift */,
+				F80A0B1022D99010002A32DC /* Main.storyboard */,
+				F80A0B1322D99010002A32DC /* Assets.xcassets */,
+				F80A0B1522D99010002A32DC /* LaunchScreen.storyboard */,
+				F80A0B1822D99010002A32DC /* Info.plist */,
+			);
+			path = "spamy-poc";
+			sourceTree = "<group>";
+		};
+		F80A0B2022D99011002A32DC /* spamy-pocTests */ = {
+			isa = PBXGroup;
+			children = (
+				F80A0B2122D99011002A32DC /* spamy_pocTests.swift */,
+				F80A0B2322D99011002A32DC /* Info.plist */,
+			);
+			path = "spamy-pocTests";
+			sourceTree = "<group>";
+		};
+		F80A0B2B22D99011002A32DC /* spamy-pocUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F80A0B2C22D99011002A32DC /* spamy_pocUITests.swift */,
+				F80A0B2E22D99011002A32DC /* Info.plist */,
+			);
+			path = "spamy-pocUITests";
+			sourceTree = "<group>";
+		};
+		F80A0B3F22D9903E002A32DC /* filter */ = {
+			isa = PBXGroup;
+			children = (
+				F8E37C1022DA4B1C00F48FA1 /* filter.entitlements */,
+				F80A0B4022D9903E002A32DC /* MessageFilterExtension.swift */,
+				F80A0B4222D9903E002A32DC /* Info.plist */,
+			);
+			path = filter;
+			sourceTree = "<group>";
+		};
+		F833E9E722DB5ACF00EC712F /* Blocklist */ = {
+			isa = PBXGroup;
+			children = (
+				F833E9EB22DB5B3800EC712F /* BlocklistVC.swift */,
+			);
+			path = Blocklist;
+			sourceTree = "<group>";
+		};
+		F833E9E822DB5AD600EC712F /* Whitelist */ = {
+			isa = PBXGroup;
+			children = (
+				F833E9ED22DB5B4800EC712F /* WhitelistVC.swift */,
+			);
+			path = Whitelist;
+			sourceTree = "<group>";
+		};
+		F833E9E922DB5AE100EC712F /* Test Filter */ = {
+			isa = PBXGroup;
+			children = (
+				F833E9EF22DB5B5A00EC712F /* TestFilterVC.swift */,
+			);
+			path = "Test Filter";
+			sourceTree = "<group>";
+		};
+		F833E9EA22DB5AEC00EC712F /* About */ = {
+			isa = PBXGroup;
+			children = (
+				F833E9F122DB5B6900EC712F /* AboutVC.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		F8E37C0122D9D3D500F48FA1 /* Accessory */ = {
+			isa = PBXGroup;
+			children = (
+				F8E37C0222D9D3EA00F48FA1 /* Constant.swift */,
+				F8E37C0D22D9D9D400F48FA1 /* UIColor.swift */,
+				F8175E2222E4AB3200D4175C /* Global.swift */,
+			);
+			path = Accessory;
+			sourceTree = "<group>";
+		};
+		F8E37C0422D9D5AA00F48FA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8E37C0522D9D5B500F48FA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8E37C0622D9D5BA00F48FA1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F8E37C0822D9D5F100F48FA1 /* Main Menu */,
+				F8E37C0722D9D5CD00F48FA1 /* Splash */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F8E37C0722D9D5CD00F48FA1 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				F80A0B0E22D99010002A32DC /* ViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		F8E37C0822D9D5F100F48FA1 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F833E9EA22DB5AEC00EC712F /* About */,
+				F833E9E922DB5AE100EC712F /* Test Filter */,
+				F833E9E822DB5AD600EC712F /* Whitelist */,
+				F833E9E722DB5ACF00EC712F /* Blocklist */,
+				F8E37C0B22D9D65B00F48FA1 /* MainMenuTVC.swift */,
+			);
+			path = "Main Menu";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F80A0B0822D99010002A32DC /* spamy-poc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80A0B3122D99011002A32DC /* Build configuration list for PBXNativeTarget "spamy-poc" */;
+			buildPhases = (
+				F80A0B0522D99010002A32DC /* Sources */,
+				F80A0B0622D99010002A32DC /* Frameworks */,
+				F80A0B0722D99010002A32DC /* Resources */,
+				F80A0B4922D9903E002A32DC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F80A0B4422D9903E002A32DC /* PBXTargetDependency */,
+			);
+			name = "spamy-poc";
+			productName = "spamy-poc";
+			productReference = F80A0B0922D99010002A32DC /* spamy-poc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F80A0B1C22D99011002A32DC /* spamy-pocTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80A0B3422D99011002A32DC /* Build configuration list for PBXNativeTarget "spamy-pocTests" */;
+			buildPhases = (
+				F80A0B1922D99011002A32DC /* Sources */,
+				F80A0B1A22D99011002A32DC /* Frameworks */,
+				F80A0B1B22D99011002A32DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F80A0B1F22D99011002A32DC /* PBXTargetDependency */,
+			);
+			name = "spamy-pocTests";
+			productName = "spamy-pocTests";
+			productReference = F80A0B1D22D99011002A32DC /* spamy-pocTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F80A0B2722D99011002A32DC /* spamy-pocUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80A0B3722D99011002A32DC /* Build configuration list for PBXNativeTarget "spamy-pocUITests" */;
+			buildPhases = (
+				F80A0B2422D99011002A32DC /* Sources */,
+				F80A0B2522D99011002A32DC /* Frameworks */,
+				F80A0B2622D99011002A32DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F80A0B2A22D99011002A32DC /* PBXTargetDependency */,
+			);
+			name = "spamy-pocUITests";
+			productName = "spamy-pocUITests";
+			productReference = F80A0B2822D99011002A32DC /* spamy-pocUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F80A0B3D22D9903E002A32DC /* filter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80A0B4622D9903E002A32DC /* Build configuration list for PBXNativeTarget "filter" */;
+			buildPhases = (
+				F80A0B3A22D9903E002A32DC /* Sources */,
+				F80A0B3B22D9903E002A32DC /* Frameworks */,
+				F80A0B3C22D9903E002A32DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = filter;
+			productName = filter;
+			productReference = F80A0B3E22D9903E002A32DC /* filter.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F80A0B0122D99010002A32DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Noman Ikram";
+				TargetAttributes = {
+					F80A0B0822D99010002A32DC = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
+					};
+					F80A0B1C22D99011002A32DC = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = F80A0B0822D99010002A32DC;
+					};
+					F80A0B2722D99011002A32DC = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = F80A0B0822D99010002A32DC;
+					};
+					F80A0B3D22D9903E002A32DC = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = F80A0B0422D99010002A32DC /* Build configuration list for PBXProject "spamy-poc" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F80A0B0022D99010002A32DC;
+			productRefGroup = F80A0B0A22D99010002A32DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F80A0B0822D99010002A32DC /* spamy-poc */,
+				F80A0B1C22D99011002A32DC /* spamy-pocTests */,
+				F80A0B2722D99011002A32DC /* spamy-pocUITests */,
+				F80A0B3D22D9903E002A32DC /* filter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F80A0B0722D99010002A32DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80A0B1722D99010002A32DC /* LaunchScreen.storyboard in Resources */,
+				F80A0B1422D99010002A32DC /* Assets.xcassets in Resources */,
+				F80A0B1222D99010002A32DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80A0B1B22D99011002A32DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80A0B2622D99011002A32DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80A0B3C22D9903E002A32DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F80A0B0522D99010002A32DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F833E9EC22DB5B3800EC712F /* BlocklistVC.swift in Sources */,
+				F80A0B0F22D99010002A32DC /* ViewController.swift in Sources */,
+				F80A0B0D22D99010002A32DC /* AppDelegate.swift in Sources */,
+				F8E37C0322D9D3EA00F48FA1 /* Constant.swift in Sources */,
+				F833E9F022DB5B5A00EC712F /* TestFilterVC.swift in Sources */,
+				F833E9F222DB5B6900EC712F /* AboutVC.swift in Sources */,
+				F8E37C0C22D9D65B00F48FA1 /* MainMenuTVC.swift in Sources */,
+				F833E9EE22DB5B4800EC712F /* WhitelistVC.swift in Sources */,
+				F8175E2322E4AB3200D4175C /* Global.swift in Sources */,
+				F8E37C0E22D9D9D400F48FA1 /* UIColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80A0B1922D99011002A32DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80A0B2222D99011002A32DC /* spamy_pocTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80A0B2422D99011002A32DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80A0B2D22D99011002A32DC /* spamy_pocUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80A0B3A22D9903E002A32DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F80A0B4122D9903E002A32DC /* MessageFilterExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F80A0B1F22D99011002A32DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F80A0B0822D99010002A32DC /* spamy-poc */;
+			targetProxy = F80A0B1E22D99011002A32DC /* PBXContainerItemProxy */;
+		};
+		F80A0B2A22D99011002A32DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F80A0B0822D99010002A32DC /* spamy-poc */;
+			targetProxy = F80A0B2922D99011002A32DC /* PBXContainerItemProxy */;
+		};
+		F80A0B4422D9903E002A32DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F80A0B3D22D9903E002A32DC /* filter */;
+			targetProxy = F80A0B4322D9903E002A32DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F80A0B1022D99010002A32DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F80A0B1122D99010002A32DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F80A0B1522D99010002A32DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F80A0B1622D99010002A32DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F80A0B2F22D99011002A32DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F80A0B3022D99011002A32DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F80A0B3222D99011002A32DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "spamy-poc/spamy-poc.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3AB3C2B65;
+				INFOPLIST_FILE = "spamy-poc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nomanikram.spamy-poc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F80A0B3322D99011002A32DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "spamy-poc/spamy-poc.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3AB3C2B65;
+				INFOPLIST_FILE = "spamy-poc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nomanikram.spamy-poc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F80A0B3522D99011002A32DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "spamy-pocTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nomanikram.spamy-pocTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spamy-poc.app/spamy-poc";
+			};
+			name = Debug;
+		};
+		F80A0B3622D99011002A32DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "spamy-pocTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nomanikram.spamy-pocTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spamy-poc.app/spamy-poc";
+			};
+			name = Release;
+		};
+		F80A0B3822D99011002A32DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "spamy-pocUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nomanikram.spamy-pocUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "spamy-poc";
+			};
+			name = Debug;
+		};
+		F80A0B3922D99011002A32DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "spamy-pocUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nomanikram.spamy-pocUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "spamy-poc";
+			};
+			name = Release;
+		};
+		F80A0B4722D9903E002A32DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = filter/filter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3AB3C2B65;
+				INFOPLIST_FILE = filter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nomanikram.spamy-poc.filter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F80A0B4822D9903E002A32DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = filter/filter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3AB3C2B65;
+				INFOPLIST_FILE = filter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nomanikram.spamy-poc.filter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F80A0B0422D99010002A32DC /* Build configuration list for PBXProject "spamy-poc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80A0B2F22D99011002A32DC /* Debug */,
+				F80A0B3022D99011002A32DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F80A0B3122D99011002A32DC /* Build configuration list for PBXNativeTarget "spamy-poc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80A0B3222D99011002A32DC /* Debug */,
+				F80A0B3322D99011002A32DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F80A0B3422D99011002A32DC /* Build configuration list for PBXNativeTarget "spamy-pocTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80A0B3522D99011002A32DC /* Debug */,
+				F80A0B3622D99011002A32DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F80A0B3722D99011002A32DC /* Build configuration list for PBXNativeTarget "spamy-pocUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80A0B3822D99011002A32DC /* Debug */,
+				F80A0B3922D99011002A32DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F80A0B4622D9903E002A32DC /* Build configuration list for PBXNativeTarget "filter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F80A0B4722D9903E002A32DC /* Debug */,
+				F80A0B4822D9903E002A32DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F80A0B0122D99010002A32DC /* Project object */;
+}
