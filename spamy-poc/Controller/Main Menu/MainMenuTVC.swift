@@ -35,9 +35,20 @@ class MainMenuTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBasics()
+//        presentShareSheet()
     }
     
- 
+    func presentShareSheet() {
+        let message = "Check out Spammy, I use it to filter out spam and junk messages from my inbox. Get it free at"
+        let url = URL(string: Constant.appUrl)
+        let urlToShare = [message,url] as [Any]
+        let sharesheet = UIActivityViewController(activityItems: urlToShare as! [Any], applicationActivities: nil)
+        sharesheet.popoverPresentationController?.sourceView = self.view
+        //        sharesheet.
+        
+        present(sharesheet,animated: true,completion: nil)
+        print("Executed")
+    }
     
     func setupBasics(){
         if isStart == false {
@@ -93,6 +104,15 @@ class MainMenuTVC: UITableViewController {
             performSegue(withIdentifier: "whitelist", sender: self)
         }else if indexPath.row == 7 {
             alertToDisplayHowToEnableSpammy()
+        }else if indexPath.row == 8 {
+            presentShareSheet()
+        }else if indexPath.row == 9 {
+            //Rate your app
+            do {
+                try UIApplication.shared.openURL(URL(string:Constant.appUrl)! as URL)
+            }catch{
+                print("Wrong Url")
+            }
         }
         else if indexPath.row == 11 {
             performSegue(withIdentifier: Constant.Segue.homeToPrivacy, sender: self)

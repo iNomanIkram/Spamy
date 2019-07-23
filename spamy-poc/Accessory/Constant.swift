@@ -10,7 +10,7 @@ import Foundation
 
 class Constant{
     static let suiteName = "group.nomanikram.spamy-poc"
-    
+    static let appUrl = "https://apps.apple.com/us/app/facetune/id606310581"
     class Segue {
         static let splashToMainMenu = "splashToMainMenu"
         static let homeToPrivacy = "homeToPrivacy"

@@ -19,7 +19,7 @@ class WhitelistVC: UIViewController {
     }
     
     fileprivate func alertControllerForAddingWhiteNumber() {
-        let alertController = UIAlertController(title: "Add New Name", message: "", preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: "Add New Number", message: "", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter Number"
         }
@@ -90,6 +90,7 @@ extension WhitelistVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! UITableViewCell
         cell.textLabel?.text = whiteNumberList[indexPath.row]
+        saveWhiteNumberList()
         return cell
     }
     
@@ -97,6 +98,7 @@ extension WhitelistVC:UITableViewDelegate,UITableViewDataSource{
         let delete = UITableViewRowAction(style: .destructive, title: "delete") { (action, indexPath) in
             // delete item at indexPath
             whiteNumberList.remove(at: indexPath.row)
+            saveWhiteNumberList()
             tableView.reloadData()
             
         }

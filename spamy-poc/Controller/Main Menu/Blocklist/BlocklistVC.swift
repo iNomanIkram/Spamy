@@ -16,9 +16,13 @@ class BlocklistVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.displayShareSheet(shareContent: "http")
+//     presentShareSheet()
         
     }
+ 
+
+    
     @IBAction func segmentedControlChanged(_ sender: Any) {
         tableview.reloadData()
     }
@@ -83,9 +87,9 @@ class BlocklistVC: UIViewController {
     }
     
     func alertControllerForEditing(indexPath:IndexPath)  {
-        let alertController = UIAlertController(title: "Edit Number", message: "", preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: "Edit", message: "", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField { (textField : UITextField!) -> Void in
-            textField.placeholder = "Enter Number"
+            textField.placeholder = ""
             if self.segmentedControl.selectedSegmentIndex == 0{
                 textField.text = blockNumberList[indexPath.row]
             }else{
