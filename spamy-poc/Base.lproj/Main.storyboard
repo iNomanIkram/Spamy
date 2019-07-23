@@ -89,7 +89,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Running" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z33-AX-LcM">
                                                     <rect key="frame" x="77.5" y="11" width="310.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -114,12 +114,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8b-RM-olc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                                     <color key="backgroundColor" red="0.29803921568627451" green="0.68627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <state key="normal" title="Start Filter">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="stateButtonPressed:" destination="kYD-7F-rPo" eventType="touchUpInside" id="88h-UY-FfA"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -155,7 +158,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="imv-o5-i3c">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blocklist" translatesAutoresizingMaskIntoConstraints="NO" id="imv-o5-i3c">
                                                     <rect key="frame" x="20" y="9" width="25" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -176,7 +179,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zd2-Ln-m2e">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whitelist" translatesAutoresizingMaskIntoConstraints="NO" id="Zd2-Ln-m2e">
                                                     <rect key="frame" x="20" y="9" width="25" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -206,7 +209,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LsT-xN-D2k">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how" translatesAutoresizingMaskIntoConstraints="NO" id="LsT-xN-D2k">
                                                     <rect key="frame" x="20" y="9" width="25" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -227,7 +230,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QWw-DF-VZv">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recomment" translatesAutoresizingMaskIntoConstraints="NO" id="QWw-DF-VZv">
                                                     <rect key="frame" x="20" y="9" width="25" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -248,7 +251,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qhf-4d-R7l">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rate" translatesAutoresizingMaskIntoConstraints="NO" id="Qhf-4d-R7l">
                                                     <rect key="frame" x="20" y="9" width="25" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -278,33 +281,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mji-gg-mo6">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="privacy" translatesAutoresizingMaskIntoConstraints="NO" id="mji-gg-mo6">
                                                     <rect key="frame" x="20" y="9" width="25" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5t-Ew-Dxy">
                                                     <rect key="frame" x="53" y="11" width="106" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="5CQ-Pw-eZP">
-                                        <rect key="frame" x="0.0" y="526" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5CQ-Pw-eZP" id="NzH-DP-bdX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K54-jj-map">
-                                                    <rect key="frame" x="20" y="9" width="25" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFV-S7-uuw">
-                                                    <rect key="frame" x="53" y="11" width="47" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -323,10 +305,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Spammy" id="J3A-mt-8bp"/>
                     <connections>
+                        <outlet property="currentStateLabel" destination="Z33-AX-LcM" id="rRu-w9-DmI"/>
+                        <outlet property="stateBtn" destination="j8b-RM-olc" id="3QE-xl-Q1p"/>
                         <segue destination="8Gp-Np-ktq" kind="show" identifier="blocklist" id="Wy2-Be-2Ui"/>
                         <segue destination="NDp-ZF-Y2s" kind="show" identifier="whitelist" id="BoX-84-7a4"/>
-                        <segue destination="ki4-Bk-qk8" kind="show" id="xVO-ez-2dB"/>
                         <segue destination="Uag-px-2nW" kind="show" id="EXZ-uX-bmq"/>
+                        <segue destination="hF2-dk-hFh" kind="show" identifier="homeToPrivacy" id="VT4-Fz-4vN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7H6-jT-7cl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -450,10 +434,10 @@
             </objects>
             <point key="canvasLocation" x="-165.21739130434784" y="1629.9107142857142"/>
         </scene>
-        <!--Test Filter-->
+        <!--How it works-->
         <scene sceneID="L54-EH-E4U">
             <objects>
-                <viewController title="Test Filter" id="ki4-Bk-qk8" customClass="TestFilterVC" customModule="spamy_poc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="How it works" id="ki4-Bk-qk8" customClass="HowItWorksVC" customModule="spamy_poc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QRR-bm-zCv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -464,6 +448,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4o-zF-p5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="732" y="1633"/>
+        </scene>
+        <!--Privacy Policy-->
+        <scene sceneID="sSL-aC-HRz">
+            <objects>
+                <viewController title="Privacy Policy" id="hF2-dk-hFh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gvy-Up-EMD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpD-5w-T6B">
+                                <rect key="frame" x="16" y="96" width="382" height="766"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">SMS spam filters provide a way for you to detect and filter spam from your incoming SMS and MMS messages. If you choose to install  SMS spam filter on your device, the filter provider can access all the text and content included in incoming SMS and MMS messages that you receive from senders who are not in your Contacts.These messages are kept locally and are not shared over internet. These messages may include verification codes from banks or other institutions, as well as other personal or sensitive information that may be in SMS and MMS messages.
+
+After you have responded to an SMS or MMS message three times or have added the sender to your Contacts, SMS and MMS messages from that sender will no longer be sent to the filter provider.
+
+You may choose to disable an SMS spam filter at any time. To do so, open Settings, tap Messages, tap Unknown &amp; Spam, and remove the filter from the list.                                                                                                                                                                 </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O3A-8e-wfN" firstAttribute="trailing" secondItem="MpD-5w-T6B" secondAttribute="trailing" constant="16" id="NuI-iP-2kA"/>
+                            <constraint firstItem="MpD-5w-T6B" firstAttribute="bottom" secondItem="O3A-8e-wfN" secondAttribute="bottom" id="Urh-cg-hfp"/>
+                            <constraint firstItem="MpD-5w-T6B" firstAttribute="leading" secondItem="O3A-8e-wfN" secondAttribute="leading" constant="16" id="XtB-Cw-m7j"/>
+                            <constraint firstItem="MpD-5w-T6B" firstAttribute="top" secondItem="O3A-8e-wfN" secondAttribute="top" constant="8" id="sg4-OP-LPn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O3A-8e-wfN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wk1-Hn-PB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905.7971014492755" y="900"/>
         </scene>
         <!--About-->
         <scene sceneID="DRZ-hO-2RE">
@@ -502,4 +520,12 @@
             <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blocklist" width="27" height="29"/>
+        <image name="how" width="27" height="25"/>
+        <image name="privacy" width="27" height="27"/>
+        <image name="rate" width="29" height="28"/>
+        <image name="recomment" width="29" height="19"/>
+        <image name="whitelist" width="27" height="29"/>
+    </resources>
 </document>

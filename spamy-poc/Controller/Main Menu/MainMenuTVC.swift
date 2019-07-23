@@ -10,20 +10,66 @@ import UIKit
 
 class MainMenuTVC: UITableViewController {
 
+  
+    @IBOutlet weak var stateBtn: UIButton!
+    @IBOutlet weak var currentStateLabel: UILabel!
+    @IBAction func stateButtonPressed(_ sender: Any) {
+        if isStart == false {
+            stateBtn.setTitle("Start Filter", for: .normal)
+            stateBtn.backgroundColor = UIColor.materialColor.green
+            currentStateLabel.text = "Not Running"
+            currentStateLabel.textColor = UIColor.materialColor.red
+            isStart = true
+        }else{
+            stateBtn.setTitle("Stop Filter", for: .normal)
+            stateBtn.backgroundColor = UIColor.materialColor.red
+            
+          
+            currentStateLabel.text = "Running"
+            currentStateLabel.textColor = UIColor.materialColor.green
+            isStart = false
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let userDefault = UserDefaults(suiteName: Constant.suiteName)
-//        print(userDefault?.array(forKey: "Array"))
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        setupBasics()
+    }
+    
+ 
+    
+    func setupBasics(){
+        if isStart == false {
+            stateBtn.setTitle("Start Filter", for: .normal)
+            stateBtn.backgroundColor = UIColor.materialColor.green
+            currentStateLabel.text = "Not Running"
+            currentStateLabel.textColor = UIColor.materialColor.red
+            isStart = true
+        }else{
+            stateBtn.setTitle("Stop Filter", for: .normal)
+            stateBtn.backgroundColor = UIColor.materialColor.red
+            
+            
+            currentStateLabel.text = "Running"
+            currentStateLabel.textColor = UIColor.materialColor.green
+            isStart = false
+        }
     }
 
     // MARK: - Table view data source
+    
+    fileprivate func alertToDisplayHowToEnableSpammy() {
+        print("hello")
+        let alertController = UIAlertController(title: "Enable Spam Blocking", message: "Follow the steps as\nSetting -> Messages -> Unknown & Spam -> Enable Spammy", preferredStyle: .alert)
+        
+        
+        let okayAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        
+        alertController.addAction(okayAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -32,18 +78,26 @@ class MainMenuTVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 13
+        return 12
     }
     
    
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if indexPath.row == 4 {
+        if indexPath.row == 2 {
+            
+        }else if indexPath.row == 4 {
             performSegue(withIdentifier: "blocklist", sender: self)
         }else if indexPath.row == 5 {
             performSegue(withIdentifier: "whitelist", sender: self)
+        }else if indexPath.row == 7 {
+            alertToDisplayHowToEnableSpammy()
         }
+        else if indexPath.row == 11 {
+            performSegue(withIdentifier: Constant.Segue.homeToPrivacy, sender: self)
+        }
+        
     }
     
     /*

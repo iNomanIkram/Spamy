@@ -13,6 +13,7 @@ class Constant{
     
     class Segue {
         static let splashToMainMenu = "splashToMainMenu"
+        static let homeToPrivacy = "homeToPrivacy"
     }
     
     class UserDefault {

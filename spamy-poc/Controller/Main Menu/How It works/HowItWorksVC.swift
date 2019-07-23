@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TestFilterVC: UIViewController {
+class HowItWorksVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

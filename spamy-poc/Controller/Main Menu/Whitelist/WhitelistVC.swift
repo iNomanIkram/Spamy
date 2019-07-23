@@ -18,10 +18,9 @@ class WhitelistVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func addButtonPressed(_ sender: Any) {
-        
+    fileprivate func alertControllerForAddingWhiteNumber() {
         let alertController = UIAlertController(title: "Add New Name", message: "", preferredStyle: UIAlertController.Style.alert)
-            alertController.addTextField { (textField : UITextField!) -> Void in
+        alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter Number"
         }
         
@@ -32,19 +31,54 @@ class WhitelistVC: UIViewController {
             self.tableview.reloadData()
             
             saveWhiteNumberList()
-
+            
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
             (action : UIAlertAction!) -> Void in })
-
+        
         
         alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
         
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func alertControllerForEditingWhiteNumber(indexPath:IndexPath)  {
+        let alertController = UIAlertController(title: "Edit Number", message: "", preferredStyle: UIAlertController.Style.alert)
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter Number"
+            textField.text = whiteNumberList[indexPath.row]
+        }
+        
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let firstTextField = alertController.textFields![0] as UITextField
+            
+            whiteNumberList[indexPath.row] = firstTextField.text!
+            self.tableview.reloadData()
+            
+            saveWhiteNumberList()
+            
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
+            (action : UIAlertAction!) -> Void in })
+        
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
+        
+        alertControllerForAddingWhiteNumber()
         
     }
+    
+    
+    
 }
 
 extension WhitelistVC:UITableViewDelegate,UITableViewDataSource{
@@ -57,6 +91,23 @@ extension WhitelistVC:UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! UITableViewCell
         cell.textLabel?.text = whiteNumberList[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "delete") { (action, indexPath) in
+            // delete item at indexPath
+            whiteNumberList.remove(at: indexPath.row)
+            tableView.reloadData()
+            
+        }
+        
+        let edit = UITableViewRowAction(style: .normal, title: "edit") { (action, indexPath) in
+            // action2 item at indexPath
+            self.alertControllerForEditingWhiteNumber(indexPath: indexPath)
+            tableView.reloadData()
+        }
+        
+        return [delete, edit]
     }
     
 }

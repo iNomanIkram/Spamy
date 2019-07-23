@@ -19,7 +19,7 @@
 		F8175E2322E4AB3200D4175C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8175E2222E4AB3200D4175C /* Global.swift */; };
 		F833E9EC22DB5B3800EC712F /* BlocklistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833E9EB22DB5B3800EC712F /* BlocklistVC.swift */; };
 		F833E9EE22DB5B4800EC712F /* WhitelistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833E9ED22DB5B4800EC712F /* WhitelistVC.swift */; };
-		F833E9F022DB5B5A00EC712F /* TestFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833E9EF22DB5B5A00EC712F /* TestFilterVC.swift */; };
+		F833E9F022DB5B5A00EC712F /* HowItWorksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833E9EF22DB5B5A00EC712F /* HowItWorksVC.swift */; };
 		F833E9F222DB5B6900EC712F /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833E9F122DB5B6900EC712F /* AboutVC.swift */; };
 		F8E37C0322D9D3EA00F48FA1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E37C0222D9D3EA00F48FA1 /* Constant.swift */; };
 		F8E37C0C22D9D65B00F48FA1 /* MainMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E37C0B22D9D65B00F48FA1 /* MainMenuTVC.swift */; };
@@ -84,7 +84,7 @@
 		F8175E2222E4AB3200D4175C /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		F833E9EB22DB5B3800EC712F /* BlocklistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocklistVC.swift; sourceTree = "<group>"; };
 		F833E9ED22DB5B4800EC712F /* WhitelistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitelistVC.swift; sourceTree = "<group>"; };
-		F833E9EF22DB5B5A00EC712F /* TestFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFilterVC.swift; sourceTree = "<group>"; };
+		F833E9EF22DB5B5A00EC712F /* HowItWorksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksVC.swift; sourceTree = "<group>"; };
 		F833E9F122DB5B6900EC712F /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		F8E37C0222D9D3EA00F48FA1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		F8E37C0B22D9D65B00F48FA1 /* MainMenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTVC.swift; sourceTree = "<group>"; };
@@ -208,12 +208,12 @@
 			path = Whitelist;
 			sourceTree = "<group>";
 		};
-		F833E9E922DB5AE100EC712F /* Test Filter */ = {
+		F833E9E922DB5AE100EC712F /* How It works */ = {
 			isa = PBXGroup;
 			children = (
-				F833E9EF22DB5B5A00EC712F /* TestFilterVC.swift */,
+				F833E9EF22DB5B5A00EC712F /* HowItWorksVC.swift */,
 			);
-			path = "Test Filter";
+			path = "How It works";
 			sourceTree = "<group>";
 		};
 		F833E9EA22DB5AEC00EC712F /* About */ = {
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				F833E9EA22DB5AEC00EC712F /* About */,
-				F833E9E922DB5AE100EC712F /* Test Filter */,
+				F833E9E922DB5AE100EC712F /* How It works */,
 				F833E9E822DB5AD600EC712F /* Whitelist */,
 				F833E9E722DB5ACF00EC712F /* Blocklist */,
 				F8E37C0B22D9D65B00F48FA1 /* MainMenuTVC.swift */,
@@ -458,7 +458,7 @@
 				F80A0B0F22D99010002A32DC /* ViewController.swift in Sources */,
 				F80A0B0D22D99010002A32DC /* AppDelegate.swift in Sources */,
 				F8E37C0322D9D3EA00F48FA1 /* Constant.swift in Sources */,
-				F833E9F022DB5B5A00EC712F /* TestFilterVC.swift in Sources */,
+				F833E9F022DB5B5A00EC712F /* HowItWorksVC.swift in Sources */,
 				F833E9F222DB5B6900EC712F /* AboutVC.swift in Sources */,
 				F8E37C0C22D9D65B00F48FA1 /* MainMenuTVC.swift in Sources */,
 				F833E9EE22DB5B4800EC712F /* WhitelistVC.swift in Sources */,
