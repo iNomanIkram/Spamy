@@ -18,17 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spammy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gci-v4-4cx">
-                                <rect key="frame" x="157.5" y="432" width="99.5" height="32"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SPAMY" translatesAutoresizingMaskIntoConstraints="NO" id="iMe-gE-4pS">
+                                <rect key="frame" x="7" y="248" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="HNi-20-0K4"/>
+                                    <constraint firstAttribute="width" constant="400" id="yra-P8-1KP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gci-v4-4cx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yl4-gW-ufE"/>
-                            <constraint firstItem="gci-v4-4cx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tdC-aP-4yI"/>
+                            <constraint firstItem="iMe-gE-4pS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YcH-wr-hLC"/>
+                            <constraint firstItem="iMe-gE-4pS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pTx-6r-oGf"/>
+                            <constraint firstItem="iMe-gE-4pS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="twb-ZQ-j5B"/>
+                            <constraint firstItem="iMe-gE-4pS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xGZ-hG-qre"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -521,6 +524,7 @@ You may choose to disable an SMS spam filter at any time. To do so, open Setting
         </scene>
     </scenes>
     <resources>
+        <image name="SPAMY" width="500" height="500"/>
         <image name="blocklist" width="27" height="29"/>
         <image name="how" width="27" height="25"/>
         <image name="privacy" width="27" height="27"/>

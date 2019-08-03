@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class MainMenuTVC: UITableViewController {
 
@@ -15,11 +16,18 @@ class MainMenuTVC: UITableViewController {
     @IBOutlet weak var currentStateLabel: UILabel!
     @IBAction func stateButtonPressed(_ sender: Any) {
         if isStart == false {
+            
             stateBtn.setTitle("Start Filter", for: .normal)
             stateBtn.backgroundColor = UIColor.materialColor.green
+            
             currentStateLabel.text = "Not Running"
             currentStateLabel.textColor = UIColor.materialColor.red
+            
+            SVProgressHUD.showSuccess(withStatus: "Stopped")
+            SVProgressHUD.dismiss(withDelay: 0.5)
+            
             isStart = true
+            saveIsStart()
         }else{
             stateBtn.setTitle("Stop Filter", for: .normal)
             stateBtn.backgroundColor = UIColor.materialColor.red
@@ -27,7 +35,13 @@ class MainMenuTVC: UITableViewController {
           
             currentStateLabel.text = "Running"
             currentStateLabel.textColor = UIColor.materialColor.green
+            
+            
+            SVProgressHUD.showSuccess(withStatus: "Started")
+            SVProgressHUD.dismiss(withDelay: 0.5)
+            
             isStart = false
+            saveIsStart()
         }
     }
     
@@ -35,7 +49,6 @@ class MainMenuTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBasics()
-//        presentShareSheet()
     }
     
     func presentShareSheet() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class WhitelistVC: UIViewController {
 
@@ -22,6 +23,7 @@ class WhitelistVC: UIViewController {
         let alertController = UIAlertController(title: "Add New Number", message: "", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter Number"
+            textField.keyboardType = .phonePad
         }
         
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
@@ -31,6 +33,9 @@ class WhitelistVC: UIViewController {
             self.tableview.reloadData()
             
             saveWhiteNumberList()
+            
+            SVProgressHUD.showSuccess(withStatus: "Added Successfully")
+            SVProgressHUD.dismiss(withDelay: 0.5)
             
         })
         
@@ -45,10 +50,12 @@ class WhitelistVC: UIViewController {
     }
     
     func alertControllerForEditingWhiteNumber(indexPath:IndexPath)  {
-        let alertController = UIAlertController(title: "Edit Number", message: "", preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: "Edit number", message: "", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter Number"
             textField.text = whiteNumberList[indexPath.row]
+            textField.keyboardType = .phonePad
+            
         }
         
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
@@ -58,6 +65,9 @@ class WhitelistVC: UIViewController {
             self.tableview.reloadData()
             
             saveWhiteNumberList()
+            
+            SVProgressHUD.showSuccess(withStatus: "Editted Successfully")
+            SVProgressHUD.dismiss(withDelay: 0.5)
             
         })
         
@@ -101,12 +111,18 @@ extension WhitelistVC:UITableViewDelegate,UITableViewDataSource{
             saveWhiteNumberList()
             tableView.reloadData()
             
+            SVProgressHUD.showSuccess(withStatus: "Deleted Successfully")
+            SVProgressHUD.dismiss(withDelay: 0.5)
+            
         }
         
         let edit = UITableViewRowAction(style: .normal, title: "edit") { (action, indexPath) in
             // action2 item at indexPath
             self.alertControllerForEditingWhiteNumber(indexPath: indexPath)
             tableView.reloadData()
+            
+            SVProgressHUD.showSuccess(withStatus: "Editted Successfully")
+            SVProgressHUD.dismiss(withDelay: 0.5)
         }
         
         return [delete, edit]

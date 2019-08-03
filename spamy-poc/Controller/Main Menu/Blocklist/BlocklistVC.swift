@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class BlocklistVC: UIViewController {
 
@@ -37,9 +38,10 @@ class BlocklistVC: UIViewController {
     
     
     func alertWithNumberTextField(){
-        let alertController = UIAlertController(title: "Add new name", message: "", preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: "Add new number", message: "", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField { (textField : UITextField!) -> Void in
-            textField.placeholder = "Enter number"
+            textField.placeholder = "number"
+            textField.keyboardType = .phonePad
         }
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let firstTextField = alertController.textFields![0] as UITextField
@@ -48,7 +50,8 @@ class BlocklistVC: UIViewController {
             self.tableview.reloadData()
             
             saveBlockNumberList()
-            
+            SVProgressHUD.showSuccess(withStatus: "Added new number")
+            SVProgressHUD.dismiss(withDelay: 0.5)
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
@@ -62,7 +65,7 @@ class BlocklistVC: UIViewController {
     }
     
     func alertWithKeywordTextField(){
-        let alertController = UIAlertController(title: "Add new name", message: "", preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: "Add new keyword", message: "", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter keyword"
         }
@@ -73,6 +76,9 @@ class BlocklistVC: UIViewController {
             self.tableview.reloadData()
             
             saveBlockKeywordList()
+            
+            SVProgressHUD.showSuccess(withStatus: "Added new Keyword")
+            SVProgressHUD.dismiss(withDelay: 0.5)
             
         })
         
@@ -87,13 +93,27 @@ class BlocklistVC: UIViewController {
     }
     
     func alertControllerForEditing(indexPath:IndexPath)  {
-        let alertController = UIAlertController(title: "Edit", message: "", preferredStyle: UIAlertController.Style.alert)
+        var title:String?
+        if segmentedControl.selectedSegmentIndex == 0 {
+            title = "Edit number"
+        }else{
+            title = "Edit keyword"
+        }
+        
+        let alertController = UIAlertController(title:title, message: "", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = ""
             if self.segmentedControl.selectedSegmentIndex == 0{
                 textField.text = blockNumberList[indexPath.row]
+                textField.keyboardType = .phonePad
+                saveBlockNumberList()
+                
+               
             }else{
                 textField.text = blockKeywordList[indexPath.row]
+                saveBlockKeywordList()
+                
+                
             }
 //            textField.text = whiteNumberList[indexPath.row]
         }
@@ -103,13 +123,22 @@ class BlocklistVC: UIViewController {
             
             if self.segmentedControl.selectedSegmentIndex == 0 {
                 blockNumberList[indexPath.row] = firstTextField.text!
+                saveBlockNumberList()
+                
+                SVProgressHUD.showSuccess(withStatus: "Editted Successfully")
+                SVProgressHUD.dismiss(withDelay: 0.5)
+                
             }else{
                  blockKeywordList[indexPath.row] = firstTextField.text!
+                 saveBlockKeywordList()
+               
+                 SVProgressHUD.showSuccess(withStatus: "Editted Successfully")
+                 SVProgressHUD.dismiss(withDelay: 0.5)
             }
 //            whiteNumberList[indexPath.row] = firstTextField.text!
             self.tableview.reloadData()
             
-            saveWhiteNumberList()
+//            saveWhiteNumberList()
             
         })
         
@@ -155,8 +184,16 @@ extension BlocklistVC: UITableViewDelegate,UITableViewDataSource{
             
             if self.segmentedControl.selectedSegmentIndex == 0 {
                 blockNumberList.remove(at: indexPath.row)
+                saveBlockNumberList()
+                
+                SVProgressHUD.showSuccess(withStatus: "Deleted Successfully")
+                SVProgressHUD.dismiss(withDelay: 0.5)
             }else{
                 blockKeywordList.remove(at: indexPath.row)
+                saveBlockKeywordList()
+                
+                SVProgressHUD.showSuccess(withStatus: "Deleted Successfully")
+                SVProgressHUD.dismiss(withDelay: 0.5)
             }
             
             tableView.reloadData()

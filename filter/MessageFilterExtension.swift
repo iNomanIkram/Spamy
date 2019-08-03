@@ -10,6 +10,12 @@ import IdentityLookup
 
 final class MessageFilterExtension: ILMessageFilterExtension {}
 
+var blockNumberList :[String] = []
+var blockKeywordList:[String] = []
+var whiteNumberList :[String] = []
+
+var isStart:Bool = false
+
 extension MessageFilterExtension: ILMessageFilterQueryHandling {
     
 
@@ -51,10 +57,10 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
 
      
             
-            var blockNumberList :[String] = []
-            var blockKeywordList:[String] = []
-            var whiteNumberList :[String] = []
-            
+//            blockNumberList :[String] = []
+//            blockKeywordList:[String] = []
+//            whiteNumberList :[String] = []
+        
             let userDefault = UserDefaults(suiteName: "group.nomanikram.spamy-poc")
             
             // Retriving Data from User Default
@@ -71,13 +77,35 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
             }
         
             if  userDefault?.array(forKey: "whiteNumberList") != nil {
-            whiteNumberList = userDefault?.array(forKey: "whiteNumberList") as! [String]
+                whiteNumberList = userDefault?.array(forKey: "whiteNumberList") as! [String]
             }else{
-            whiteNumberList = []
+                whiteNumberList = []
+            }
+        
+            if  userDefault?.array(forKey: "isStart") != nil {
+                isStart = (userDefault?.bool(forKey: "isStart"))!
+            }else{
+                isStart = false
             }
         
             let sender = queryRequest.sender
             let message = queryRequest.messageBody
+        
+//        return .filter
+        
+            if isStart {
+                if blockCheck(number: sender!, messageBody: message!){
+                return .filter
+            }else{
+                return .allow
+            }
+            
+            }else{
+                print("it wouldn't filter any thing")
+                return .none
+            }
+        
+        
 
         return .filter
     }
@@ -87,5 +115,34 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
         return .filter
     }
     
+    func blockCheck(number:String,messageBody:String) -> Bool {
+        var blockStatus = false
+        
+        if blockNumberList.contains(number){
+            print("Block: number")
+            blockStatus = true
+        }else if checkIfKeywordExistsInString(str: messageBody){
+            print("Block: keyword")
+            blockStatus = true
+        }
+        
+        if whiteNumberList.contains(number){
+            print("Whitelist: number")
+            blockStatus = false
+        }
+        
+        print("Block Status: \(blockStatus)")
+        return blockStatus
+    }
     
+    func checkIfKeywordExistsInString(str:String)-> Bool{
+        var output = false
+        for keywrd in blockKeywordList{
+            if str.lowercased().contains(keywrd.lowercased()){
+                output = true
+                break
+            }
+        }
+        return output
+    }
 }

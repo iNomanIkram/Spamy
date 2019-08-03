@@ -40,6 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             whiteNumberList = []
         }
         
+        if  userDefault?.array(forKey: "isStart") != nil {
+            isStart = (userDefault?.bool(forKey: "isStart"))!
+        }else{
+            isStart = false
+        }
+        
         /***************** End *****************/
         
 //        print("blockNumberList: \(blockNumberList)")

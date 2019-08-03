@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "filter/MessageFilterExtension.swift"
-            timestampString = "585432298.192965"
+            timestampString = "586510472.729156"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "offlineAction(for:)"
             landmarkType = "7">
          </BreakpointContent>

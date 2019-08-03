@@ -22,6 +22,8 @@ func saveAll(){
     userDefault?.set(blockNumberList, forKey: Constant.UserDefault.blockNumber)
     userDefault?.set(blockKeywordList, forKey: Constant.UserDefault.blockKeyword)
     userDefault?.set(whiteNumberList, forKey: Constant.UserDefault.whiteNumber)
+    userDefault?.set(isStart, forKey: "isStart")
+    
 }
 
 func saveBlockNumberList(){
@@ -37,4 +39,9 @@ func saveBlockKeywordList(){
 func saveWhiteNumberList(){
     let userDefault = UserDefaults(suiteName: Constant.suiteName)
     userDefault?.set(whiteNumberList, forKey: Constant.UserDefault.whiteNumber)
+}
+
+func saveIsStart(){
+    let userDefault = UserDefaults(suiteName: Constant.suiteName)
+    userDefault?.set(isStart, forKey: "isStart")
 }
